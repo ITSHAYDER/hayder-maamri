@@ -1,0 +1,40 @@
+:root {
+    --black: #000;
+    --white: #fff;
+  }
+  
+  body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: "Lato", sans-serif;
+  }
+  
+  nav {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 1rem 0;
+  }
+  
+  nav .logo h1 {
+    font-size: 2rem;
+  }
+  
+  nav .menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav .menu ul li {
+    display: inline;
+    margin-right: 1rem;
+  }
+  
+  main {
+    padding: 2rem 0;
+  }
+  
+  footer {
+    background-color: var(--black);
+    color: var(--white);
+  }
+  

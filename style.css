@@ -4,7 +4,7 @@
   }
   
   body {
-    background-color: #0a192f;
+    background-color: var(--black);
     color: var(--white);
     font-family: "Lato", sans-serif;
   }

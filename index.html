@@ -8,90 +8,136 @@
   <link rel="stylesheet" href="style.css">
   <title>Hayder Maamri</title>
 </head>
-<body>
-  <nav class="bg-black text-white py-5">
-    <div class="container mx-auto">
+<body class="bg-gray-900 text-white">
+  <nav class="bg-gray-800 py-4 sticky top-0 z-50">
+    <div class="container mx-auto px-4">
       <div class="flex items-center justify-between">
         <div class="logo">
-          <h1 class="text-2xl font-semibold font-cursive text-green-400"></h1>
+          <a href="index.html"><h1 class="text-2xl font-semibold font-cursive text-green-400">Hayder Maamri</h1></a>
         </div>
         <div class="menu">
           <ul class="flex space-x-4">
-            <li><a href="#about" class="text-gray-400 hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-semibold">About</a></li>
-            <li><a href="#projects" class="text-gray-400 hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-semibold">Work</a></li>
+            <li><a href="#about" class="text-gray-300 hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">About</a></li>
+            <li><a href="#skills" class="text-gray-300 hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Skills</a></li>
+            <li><a href="#projects" class="text-gray-300 hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Projects</a></li>
           </ul>
         </div>
       </div>
     </div>
   </nav>
 
-  <main class="container mx-auto py-10">
-    <section id="home" class="py-12 text-center">
+  <main class="container mx-auto px-4">
+    <section id="home" class="py-20 text-center">
+      <div class="mb-10">
+        <img src="me.jpeg" alt="Hayder Maamri" class="mx-auto rounded-full shadow-lg border-4 border-green-400 h-48 w-48 object-cover">
+      </div>
       <h1 class="text-4xl font-bold">Hi, my name is</h1>
       <h2 class="text-5xl font-extrabold text-green-400 py-2">Hayder Maamri</h2>
-      <p class="text-lg text-gray-400 max-w-2xl mx-auto py-4">I'm a CS student, freelance web scraper, passionate about using technology to solve real-world problems, and Coding my way to a brighter future.</p>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto py-4">I'm a CS student, freelance programmer, passionate about using technology to solve real-world problems, and coding my way to a brighter future.</p>
       <div class="py-4">
+        <a href="https://www.linkedin.com/in/hayder-maamri-75a119233/" class="text-green-400 hover:text-white pr-4 transition duration-300">
+          <i class="fab fa-linkedin fa-2x"></i>
         </a>
-        <a href="https://www.linkedin.com/in/hayder-maamri-75a119233/" class="text-green-400 hover:text-white pr-4">
-          <i class="fab fa-linkedin fa-lg"></i>
+        <a href="https://github.com/ITSHAYDER" class="text-green-400 hover:text-white pr-4 transition duration-300">
+          <i class="fab fa-github fa-2x"></i>
         </a>
-        <a href="https://github.com/ITSHAYDER" class="text-green-400 hover:text-white pr-4">
-          <i class="fab fa-github fa-lg"></i>
-        </a>
-
       </div>
       <div class="mt-6 sm:flex justify-center">
         <div class="rounded-md shadow">
-          <a href="mailto:maamrihayder@gmail.com" class="w-full flex items-center justify-center px-4 py-2 border border-green-400 font-medium rounded-md text-white bg-transparent hover:bg-gray-800 sm:py-3 sm:text-lg sm:px-6">
+          <a href="mailto:maamrihayder@gmail.com" class="w-full flex items-center justify-center px-8 py-3 border border-green-400 text-base font-medium rounded-md text-white bg-transparent hover:bg-green-700 md:py-4 md:text-lg md:px-10 transition duration-300">
             Contact Me
           </a>
         </div>
       </div>
     </section>
+
+    <section id="about" class="py-20">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-extrabold text-green-400 mb-8 text-center">About Me</h2>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Hi, I'm Hayder Maamri, a passionate CS student, entrepreneur, and tech enthusiast from Tunisia. I’m deeply interested in physics and robotics, and I love leveraging technology to tackle real-world problems. With over three years of coding experience, I’ve developed a strong understanding of the digital landscape. I’m particularly excited about machine learning and AI, and I’m always eager to explore how these technologies can drive innovation and create impactful solutions.
+
+
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="py-20">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-extrabold text-green-400 mb-8 text-center">Technical Stack</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="bg-gray-800 rounded-lg p-4 text-center">
+            <i class="fab fa-python fa-3x text-green-400 mb-2"></i>
+            <h3 class="text-xl font-semibold">Python</h3>
+          </div>
+          <div class="bg-gray-800 rounded-lg p-4 text-center">
+            <i class="fas fa-database fa-3x text-green-400 mb-2"></i>
+            <h3 class="text-xl font-semibold">SQL</h3>
+          </div>
+          <div class="bg-gray-800 rounded-lg p-4 text-center">
+            <i class="fab fa-js fa-3x text-green-400 mb-2"></i>
+            <h3 class="text-xl font-semibold">JavaScript</h3>
+          </div>
+          <div class="bg-gray-800 rounded-lg p-4 text-center">
+            <i class="fab fa-html5 fa-3x text-green-400 mb-2"></i>
+            <h3 class="text-xl font-semibold">HTML/CSS</h3>
+          </div>
+          <div class="bg-gray-800 rounded-lg p-4 text-center">
+            <i class="fab fa-github fa-3x text-green-400 mb-2"></i>
+            <h3 class="text-xl font-semibold">Git</h3>
+          </div>
+          <div class="bg-gray-800 rounded-lg p-4 text-center">
+            <i class="fas fa-robot fa-3x text-green-400 mb-2"></i>
+            <h3 class="text-xl font-semibold">Machine Learning</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-20">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-extrabold text-green-400 mb-12 text-center">My Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+            <img src="webscrape.png" alt="Amazon Web Scraper" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold text-green-400 mb-3">Amazon Web Scraper</h3>
+              <p class="text-gray-300 mb-4">A Python-based Amazon web scraper for extracting product data, prices, and ratings. Streamlined data collection for market analysis and competitor insights.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-green-700 text-white px-2 py-1 rounded text-sm">Python</span>
+                <span class="bg-green-700 text-white px-2 py-1 rounded text-sm">BeautifulSoup</span>
+                <span class="bg-green-700 text-white px-2 py-1 rounded text-sm">Pandas</span>
+              </div>
+              <a href="#" class="text-green-400 hover:underline">View Project</a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+            <img src="Screenshot 2023-10-18 194340.png" alt="YouTube Playlist Calculator" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold text-green-400 mb-3">YouTube Playlist Calculator</h3>
+              <p class="text-gray-300 mb-4">A web app that calculates the total duration of a YouTube playlist. Users can enter the playlist URL to get accurate duration, simplifying content planning and scheduling.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-green-700 text-white px-2 py-1 rounded text-sm">Python</span>
+                <span class="bg-green-700 text-white px-2 py-1 rounded text-sm">Flask</span>
+                <span class="bg-green-700 text-white px-2 py-1 rounded text-sm">YouTube API</span>
+              </div>
+              <a href="https://mediasaverhub.pythonanywhere.com/" class="text-green-400 hover:underline">View Project</a>
+            </div>
+          </div>
+
+          <!-- Add more projects here -->
+        </div>
+      </div>
+    </section>
   </main>
 
-  <section id="about" class="pb-6">
-    <div class="container mx-auto">
-      <div class="text-center">
-        <h2 class="text-3xl font-extrabold text-green-400">About Me</h2>
-      </div>
-      <div class="max-w-3xl mx-auto mt-6">
-        <p class="text-lg text-gray-400">Hello, I'm Hayder Maamri. I'm a passionate CS student, freelance web scraper, and entrepreneur based in Tunisia. My interests extend to physics, and I love using technology to address real-world challenges. With over three years of coding experience, I've honed my skills and insights into the digital world. As a freelance web scraper, I bring a robust skill set in data extraction and a passion for empowering businesses to create cutting-edge digital solutions.</p>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="py-12">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-extrabold text-green-400 mb-8 text-center">My Projects</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Project 1 -->
-        <div class="group relative bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2">
-          <img src="webscrape.png" alt="Project 1" class="w-full h-64 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold text-green-400 mb-2">Amazon web scraper</h3>
-            <p class="text-gray-400 mb-4">In this project, I created a Python-based Amazon web scraper for extracting product data, prices, and ratings. Streamlined data collection for market analysis and competitor insights.</p>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="group relative bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2">
-          <img src="Screenshot 2023-10-18 194340.png" alt="Project 2" class="w-full h-64 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold text-green-400 mb-2">YouTube playlist calculator</h3>
-            <p class="text-gray-400 mb-4">Developed a YouTube web app that calculates the total duration of a playlist. Users can simply enter the playlist URL, and the app provides the accurate duration, simplifying content planning and scheduling.</p>
-            <a href="https://mediasaverhub.pythonanywhere.com/" class="text-green-400 hover:underline">Learn More</a>
-          </div>
-        </div>
-
-        <!-- Add more projects here -->
-      </div>
-    </div>
-  </section>
-
-  <footer class="bg-black text-white text-center py-5">
-    <p>&copy; 2023 Hayder Maamri</p>
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2023 Hayder Maamri. All rights reserved.</p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </body>
 </html>

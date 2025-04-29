@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hayder Maamri | AI & Computer Vision Student</title>
+  <meta name="description" content="Passionate student specializing in computer vision, machine learning, and AI systems development">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    :root {
+      --primary: #4361ee;
+      --primary-dark: #3a56d4;
+      --dark: #1a1a2e;
+      --light: #f8f9fa;
+      --gray: #6c757d;
+      --light-gray: #e9ecef;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: var(--light);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Typography */
+    h1, h2, h3 {
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50%;
+      height: 3px;
+      background-color: var(--primary);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      text-align: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn.secondary {
+      background-color: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .btn.secondary:hover {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      color: var(--dark);
+      position: relative;
+      text-decoration: none;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 7rem 0 4rem;
+      margin-top: 60px;
+    }
+
+    .hero .container {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .hero p {
+      margin-bottom: 2rem;
+      color: var(--gray);
+      font-size: 1.1rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-number {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .hero-image {
+      flex: 1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    /* About Section */
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about p {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .education {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background-color: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .achievement-item {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .achievement-item::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+
+    /* Skills Section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .skill-category {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .skill-category h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skill-category ul {
+      list-style-type: none;
+    }
+
+    .skill-category li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .skill-category li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+
+    /* Enhanced Projects Section */
+    .projects {
+      background-color: #f8fafc;
+    }
+    
+    .projects-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    
+    .project-card {
+      background-color: white;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(67, 97, 238, 0.15);
+    }
+    
+    .project-icon {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(67, 97, 238, 0.1);
+      color: var(--primary);
+      font-size: 3rem;
+    }
+    
+    .project-content {
+      padding: 1.75rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .project-content h3 {
+      margin-bottom: 0.75rem;
+      font-size: 1.4rem;
+      color: var(--dark);
+    }
+    
+    .project-content p {
+      color: var(--gray);
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+      line-height: 1.7;
+    }
+    
+    .project-features {
+      margin-bottom: 1.5rem;
+    }
+    
+    .project-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .project-feature i {
+      color: var(--primary);
+      margin-top: 0.2rem;
+      font-size: 0.9rem;
+    }
+    
+    .project-feature span {
+      font-size: 0.95rem;
+      color: var(--dark);
+    }
+    
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .project-tech span {
+      background-color: rgba(67, 97, 238, 0.1);
+      color: var(--primary);
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: auto;
+    }
+    
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .project-link.primary {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .project-link.primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    .project-link.secondary {
+      background-color: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+    
+    .project-link.secondary:hover {
+      background-color: rgba(67, 97, 238, 0.1);
+    }
+
+    /* Experience Section */
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .leadership-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      border-left: 4px solid var(--primary);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .leadership-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .leadership-card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .leadership-date {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-bottom: 0.5rem;
+    }
+
+    .leadership-description {
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    .leadership-description br {
+      display: block;
+      content: "";
+      margin-bottom: 0.5rem;
+    }
+
+    /* Research Section */
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .research-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .research-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .research-card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .research-status {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .status-progress {
+      background-color: rgba(255, 193, 7, 0.2);
+      color: #ff9800;
+    }
+
+    .status-published {
+      background-color: rgba(40, 167, 69, 0.2);
+      color: #28a745;
+    }
+
+    /* Contact Section */
+    .contact-content {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .email-link {
+      display: inline-block;
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgba(67, 97, 238, 0.1);
+      color: var(--primary);
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background-color: var(--primary);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem 0;
+      background-color: var(--dark);
+      color: white;
+    }
+
+    /* Tab System for Skills */
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid var(--light-gray);
+      margin-bottom: 2rem;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      padding: 0.75rem 1.5rem;
+      background: none;
+      border: none;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+      white-space: nowrap;
+    }
+
+    .tab-btn.active {
+      color: var(--primary);
+    }
+
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* CV Download Button */
+    .cv-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--dark);
+      color: white;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      margin-top: 2rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .cv-download:hover {
+      background-color: #121220;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero .container {
+        flex-direction: column;
+      }
+      
+      .hero-image {
+        order: -1;
+        margin-bottom: 2rem;
+      }
+      
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .menu-toggle {
+        display: block;
+      }
+      
+      .hero-links {
+        flex-direction: column;
+      }
+
+      .leadership-grid,
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .tabs {
+        justify-content: flex-start;
+      }
+      
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-links {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.75rem; }
+      
+      .section {
+        padding: 3rem 0;
+      }
+      
+      .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">Hayder Maamri</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Hayder Maamri</h1>
+        <h2>AI & Computer Vision Student</h2>
+        <p>Passionate about building AI systems with focus on computer vision, machine learning, and practical applications.</p>
+        
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-label">Hands-on Experience in AI Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Strong Focus on Learning & Growth</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Active in Research and Development</span>
+          </div>
+        </div>
+        
+        <div class="hero-links">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="https://github.com/ITSHAYDER" target="_blank" class="btn secondary">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="#contact" class="btn secondary">
+            <i class="fas fa-envelope"></i> Contact
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="me.jpg" alt="Hayder Maamri">
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-content">
+          <p>I'm a dedicated student with a strong passion for technology, including computer vision, machine learning, and system development. My approach blends theoretical learning with hands-on projects to develop practical, real-world skills in AI and software engineering.</p>
+          
+          <p>With experience across various projects ranging from data collection to model deployment I focus on building systems that are both technically robust and practically applicable in different domains, including robotics and AI-driven applications.</p>
+          
+          <p>Currently, I'm exploring computer vision applications, optimizing models for real-world performance, and gaining a deeper understanding of the complete lifecycle of AI systems.</p>
+      
+      
+        <div class="education">
+          <h3>Education & Background</h3>
+          <p><strong>Lycée Secondaire De Jammel</strong> Computer Science</p>
+          <ul>
+            <li class="achievement-item">Self-taught AI/ML concepts through independent study and project work</li>
+            <li class="achievement-item">Developed multiple AI applications as learning projects</li>
+            <li class="achievement-item">Maintained strong academic performance </li>
+          </ul>
+          <a href="#" class="cv-download">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="ai">AI & Computer Vision</button>
+        <button class="tab-btn" data-tab="dev">Programming</button>
+        <button class="tab-btn" data-tab="tools">Tools</button>
+      </div>
+      
+      <!-- AI/ML Tab -->
+      <div class="tab-content active" id="ai-tab">
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+            <ul>
+              <li>Deep Learning Fundamentals</li>
+              <li>Model Training & Evaluation</li>
+              <li>Transfer Learning</li>
+              <li>Basic Model Deployment</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-eye"></i> Computer Vision</h3>
+            <ul>
+              <li>OpenCV</li>
+              <li>Image Processing</li>
+              <li>Object Detection</li>
+              <li>Feature Extraction</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-project-diagram"></i> Frameworks</h3>
+            <ul>
+              <li>PyTorch</li>
+              <li>TensorFlow/Keras</li>
+              <li>Hugging Face</li>
+              <li>YOLO</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Development Tab -->
+      <div class="tab-content" id="dev-tab">
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Languages</h3>
+            <ul>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>Arduino</li>
+              <li>HTML/CSS</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-laptop-code"></i> Development</h3>
+            <ul>
+              <li>Git</li>
+              <li>Debugging</li>
+              <li>Testing</li>
+              <li>Documentation</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-server"></i> Systems</h3>
+            <ul>
+              <li>Basic API Design</li>
+              <li>ROS</li>
+              <li>Linux Environment</li>
+              <li>Basic Cloud Concepts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tools Tab -->
+      <div class="tab-content" id="tools-tab">
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3><i class="fas fa-tools"></i> Productivity</h3>
+            <ul>
+              <li>VS Code</li>
+              <li>Jupyter Notebook</li>
+              <li>Notion</li>
+              <li>Google Colab</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-terminal"></i> Dev Tools</h3>
+            <ul>
+              <li>GitHub</li>
+              <li>Docker (Basic)</li>
+              <li>Postman</li>
+              <li>Linux CLI</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-video"></i> Collaboration</h3>
+            <ul>
+              <li>Slack/Discord</li>
+              <li>Zoom</li>
+              <li>Technical Presentations</li>
+              <li>Project Documentation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="projects-header">
+        <h2 class="section-title">Projects</h2>
+      </div>
+      
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-object-group"></i>
+          </div>
+          <div class="project-content">
+            <h3>Object Tracking System</h3>
+            <p>Created a Python program using OpenCV that identifies and follows objects in video streams in real-time with adjustable detection parameters.</p>
+            
+            <div class="project-features">
+              <div class="project-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Works with webcam or video files</span>
+              </div>
+              <div class="project-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Handles multiple objects simultaneously</span>
+              </div>
+              <div class="project-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Customizable detection thresholds</span>
+              </div>
+            </div>
+            
+            <div class="project-tech">
+              <span>OpenCV</span>
+              <span>Python</span>
+              <span>Multi-threading</span>
+            </div>
+            
+
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="project-content">
+            <h3>Autonomous Navigation Simulation</h3>
+            <p>Developed a computer vision system for path finding and obstacle avoidance in simulated environments with high accuracy.</p>
+            
+            <div class="project-features">
+              <div class="project-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>95% navigation accuracy in tests</span>
+              </div>
+              <div class="project-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Real-time processing capability</span>
+              </div>
+              <div class="project-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Dynamic obstacle avoidance</span>
+              </div>
+            </div>
+            
+            <div class="project-tech">
+              <span>OpenCV</span>
+              <span>Python</span>
+              <span>ROS</span>
+              <span>Gazebo</span>
+            </div>
+            
+
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-paw"></i>
+          </div>
+          <div class="project-content">
+            <h3>Sylvapaws Animal Rescue Platform</h3>
+            <p>Full-stack web application connecting animal rescuers with pets in need through location-based matching and comprehensive profiles.</p>
+            
+            <div class="project-features">
+              <div class="project-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>RESTful API backend</span>
+              </div>
+              <div class="project-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Secure JWT authentication</span>
+              </div>
+              <div class="project-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Interactive location mapping</span>
+              </div>
+            </div>
+            
+            <div class="project-tech">
+              <span>Flask</span>
+              <span>SQLAlchemy</span>
+              <span>Bootstrap</span>
+              <span>JWT</span>
+              <span>JavaScript</span>
+            </div>
+            
+            <div class="project-links">
+              <a href="https://github.com/ITSHAYDER/Sylvapaws" target="_blank" class="project-link primary">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section id="research" class="section research">
+    <div class="container">
+      <h2 class="section-title">Research & Learning</h2>
+      <div class="research-grid">
+        <div class="research-card">
+          <h3>Autonomous Drone Simulation for Precision Agriculture</h3>
+          <span class="research-status status-progress">In Progress</span>
+          <p>Simulating autonomous drone navigation and multispectral imaging for real-time crop health monitoring using NDVI analysis in a controlled Gazebo environment.</p>
+          <div class="project-tech">
+            <span>ROS</span>
+            <span>Gazebo Simulation</span>
+            <span>NDVI Analysis</span>
+            <span>OpenCV</span>
+            <span>Python</span>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <p>I'm currently focused on impactful projects feel free to reach out for research, job opportunities, internships, or collaborations</p>
+        <a href="mailto:maamrihayder@gmail.com" class="email-link">maamrihayder@gmail.com</a>
+        <div class="social-links">
+          <a href="https://github.com/ITSHAYDER" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/hayder-maamri-75a119233/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://drive.google.com/uc?export=download&id=1lYYXN7YSZbVxAzWwgg6qVRMhI77bEeBX" download><i class="fas fa-file-pdf"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Hayder Maamri. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple tab system
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons and content
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        
+        // Add active class to clicked button and corresponding content
+        btn.classList.add('active');
+        const tabId = btn.getAttribute('data-tab');
+        document.getElementById(`${tabId}-tab`).classList.add('active');
+      });
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Update copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
